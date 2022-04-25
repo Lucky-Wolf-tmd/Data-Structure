@@ -31,7 +31,7 @@ void test_vector()
 	
 }
 
-//3
+ //3
 //new 与 delete 示例
 void test_ptr_DAM_IntCell()
 {
@@ -293,6 +293,53 @@ void test_More_CPP_GFunc() {
 	cout << FINDMAX::CfindMax(arr) << endl;
 }
 
+//matrix的[]重载及使用
+namespace MATRIX {
+	template<typename Object>
+	class matrix
+	{
+	public:
+		matrix(int rows, int cols) :array(rows)
+		{
+			for (int i = 0; i < rows; i++)
+				array[i].resize(cols);
+		}
+
+		const vector<Object> & operator [](int row)const
+		{	return array[row];	}
+		vector<Object> & operator[](int row)
+		{	return array[row];	}
+
+		int numrows()const { return array.size(); }
+		int numcols()const { return (numrows() ? array[0].size() : 0); }
+
+	private:
+		vector<vector<Object>>array;
+	};
+}
+void test_matrix(){
+	MATRIX::matrix<IntCell> MatrixCell(5, 5);
+	for (int i = 0; i < MatrixCell.numrows(); i++)
+		FINDMAX::fillfull(MatrixCell[i]);
+
+	for (int i = 0; i < MatrixCell.numrows(); i++) {
+		for (int j = 0; j < MatrixCell.numcols(); j++)
+			cout << MatrixCell[i][j].readST() << "\t";
+		cout << endl;
+	}
+	cout << "*************************************" << endl;
+	for (int i = 0; i < MatrixCell.numrows(); i++) {
+		for (int j = 0; j < MatrixCell.numcols(); j++)
+			MatrixCell[i][j] = MatrixCell[j][i];
+	}
+	for (int i = 0; i < MatrixCell.numrows(); i++) {
+		for (int j = 0; j < MatrixCell.numcols(); j++)
+			cout << MatrixCell[i][j].readST() << "\t";
+		cout << endl;
+	}
+
+}
+
 void choose_test(int index) {
 	switch (index)
 	{
@@ -306,13 +353,14 @@ void choose_test(int index) {
 	case 8:test_comparable_class();							 break;
 	case 9:test_generic_func();								 break;
 	case 10:test_More_CPP_GFunc();							 break;
+	case 11:test_matrix();									 break;
 	default:break;
 	}
 }
 int main()
 {
 	srand((unsigned)time(0));
-	choose_test(10);
+	choose_test(11);
 
 	return 0;
 }
