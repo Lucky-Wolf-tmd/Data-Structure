@@ -7,3 +7,20 @@
 
 【**有趣的算法问题**】 [N皇后问题](N皇后问题/源.cpp)
 【**算法的效率**】[最大子串和](最大子序列和/最大子序列和.cpp)
+
+## 数据结构：
+一、表、栈、队列
+1）表： [数组表vector](表_栈_队列/VECTOR.h) [链表list](表_栈_队列/LIST.h) 
+2)  栈： [栈stack](表_栈_队列/STACK.h)
+3) 队列: [队列queue](表_栈_队列/QUEUE.h)
+###表、栈应用：
+[【括号平衡(Line:149)】](表_栈_队列/main.cpp)【中缀表达式】
+[【 后缀表达式(逆波兰记法)(Line:196)】](表_栈_队列/main.cpp)
+[【中缀表达式(Line:252)】](表_栈_队列/main.cpp)
+###异常测试：
+[【abort】](异常处理代码example/abort.cpp)
+[【exception】](异常处理代码example/exception.cpp)
+[【noexpect】](异常处理代码example/noexpect.cpp)
+[【MyExeption】](表_栈_队列/MyException.h)
+
+
