@@ -12,11 +12,11 @@
 
 ### 一、表、栈、队列
 
-1）表： [数组表vector](表_栈_队列/VECTOR.h) [链表list](表_栈_队列/LIST.h) 
+> 表： [数组表vector](表_栈_队列/VECTOR.h) [链表list](表_栈_队列/LIST.h) 
 
-2) 栈： [栈stack](表_栈_队列/STACK.h)
+> 栈： [栈stack](表_栈_队列/STACK.h)
 
-3) 队列: [队列queue](表_栈_队列/QUEUE.h)
+> 队列: [队列queue](表_栈_队列/QUEUE.h)
 
 
 #### 表、栈应用：
